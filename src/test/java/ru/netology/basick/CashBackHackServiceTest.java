@@ -1,0 +1,24 @@
+package ru.netology.basick;
+
+import org.testng.annotations.Test;
+
+import static org.testng.Assert.*;
+
+public class CashBackHackServiceTest {
+    @Test
+    public void shouldCashBackService(){
+        CashBackHackService service = new CashBackHackService();
+        int amount = 900;
+        int actual = service.remain(amount);
+        int expected = 100;
+        assertEquals(expected, actual);
+    }
+    @Test
+    public void shouldCashBackServiceTwo(){
+        CashBackHackService service = new CashBackHackService();
+        int amount = 1000;
+        int actual = service.remain(amount);
+        int expected = 1000;
+        assertEquals(expected, actual);
+    }
+}
